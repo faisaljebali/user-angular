@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Detail pour {{usertab.nom}}</h1>
+<br>
+<div class="" *ngIf="usertab != null">
+<b>Nom</b> : {{usertab.nom}}<br>
+<b>Prenom</b> : {{usertab.prenom}}<br>
+<b>Age</b> : {{usertab.age}}<br>
+<b>E-mail</b> : {{usertab.email}}<br>
+<b>Description</b> : {{usertab.description}}<br><br>
+<a [routerLink]="['/']" class="btn btn-primary">Retour</a>
+</div>
+</div>

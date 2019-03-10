@@ -1,0 +1,31 @@
+<div class="container">
+<h1>Ajouter Un utilisateur</h1><br>
+<form>
+    <div class="alert alert-danger" role="alert" *ngIf="iserreur">
+        Veuillez remplire tous les champs
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nom</label>
+      <input #nom type="text" class="form-control" id="nom" placeholder="Nom">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Prenom</label>
+        <input #prenom type="text" class="form-control" id="prenom" placeholder="Prenom">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input #email type="email" class="form-control" id="email"  placeholder="E-mail">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Age</label>
+        <input #age type="number" class="form-control" id="age" placeholder="Age">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <textarea #description rows='5' name="description" class="form-control" id="description" ></textarea>
+    </div>
+    <button type="button" (click)="useradd(nom,prenom,email,age,description)" class="btn btn-primary">Ajouter</button>
+    &nbsp;&nbsp;
+    <button type="button" (click)="retourhome()" class="btn btn-danger">Retour</button>
+  </form>
+</div>

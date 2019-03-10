@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="m-t-50">
+<a [routerLink]="['/ajouter']" class="btn btn-primary"> + Ajouter </a>
+<br><br>
+<h1>Utilisateurs</h1>
+
+<br>
+<div class="alert alert-primary" role="alert" *ngIf="userserve.users.length == 0">
+    Not user found !
+</div>
+
+<table class="table table-bordered" *ngIf="userserve.users.length != 0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userserve.users; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{user.nom}}</td>
+        <td>{{user.prenom}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.age}}</td>
+        <td>
+          <a (click)="supprimer(i)" href="#">Supprier</a> -
+          <a [routerLink]="['/view',i]">View</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
